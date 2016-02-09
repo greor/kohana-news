@@ -28,23 +28,18 @@ return array(
 					'privilege' => 'add',
 				),
 				'news_category_edit_1' => array(
-					'role' => 'super',
-					'resource' => 'news_category',
-					'privilege' => 'edit',
-				),
-				'news_category_edit_2' => array(
 					'role' => 'full',
 					'resource' => 'news_category',
 					'privilege' => 'edit',
-					'assertion' => array('Acl_Assert_Argument', array(
-						'site_id' => 'site_id'
+					'assertion' => array('Acl_Assert_Edit', array(
+						'site_id' => SITE_ID,
 					)),
 				),
 				'news_category_hide' => array(
 					'role' => 'full',
 					'resource' => 'news_category',
 					'privilege' => 'hide',
-					'assertion'	=> array('Acl_Assert_Site', array(
+					'assertion'	=> array('Acl_Assert_Hide', array(
 						'site_id' => SITE_ID,
 						'site_id_master' => SITE_ID_MASTER
 					)),
@@ -67,23 +62,18 @@ return array(
 
 				
 				'news_edit_1' => array(
-					'role' => 'super',
-					'resource' => 'news',
-					'privilege' => 'edit',
-				),
-				'news_edit_2' => array(
 					'role' => 'base',
 					'resource' => 'news',
 					'privilege' => 'edit',
-					'assertion' => array('Acl_Assert_Argument', array(
-						'site_id' => 'site_id'
+					'assertion' => array('Acl_Assert_Edit', array(
+						'site_id' => SITE_ID,
 					)),
 				),
 				'news_hide' => array(
 					'role' => 'base',
 					'resource' => 'news',
 					'privilege' => 'hide',
-					'assertion' => array('Acl_Assert_Site', array(
+					'assertion' => array('Acl_Assert_Hide', array(
 						'site_id' => SITE_ID,
 						'site_id_master' => SITE_ID_MASTER
 					)),
