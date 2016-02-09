@@ -86,7 +86,7 @@ class Controller_Admin_Modules_News_Category extends Controller_Admin_Modules_Ne
 					'meta_tags'
 				);
 				
-				if (empty($values['uri']) OR row_exist($orm, 'uri', $values['uri'])) {
+				if (empty($values['uri'])) {
 					$values['uri'] = transliterate_unique($values['title'], $orm, 'uri');
 				}
 				
